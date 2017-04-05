@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+<tiles-definitions>
+
+  <definition name="ser.page" path="/layout/PageLayout.jsp">
+    <put name="title" value="SICODIF"/>
+    <put name="jscript" value=""/>
+    <put name="header" value="/layout/Header.jsp"/>
+    <put name="content" value="/layout/Blank.jsp"/>
+    <put name="footer" value="/layout/Footer.jsp"/>
+  </definition>
+  
+  <definition name="ser.reporte" path="/layout/RepLayout.jsp">
+    <put name="title" value="SICODIF"/>
+    <put name="content" value="/layout/Blank.jsp"/>
+  </definition>
+  
+  <definition name="ser.xls" path="/layout/ExcelLayout.jsp">
+    <put name="title" value="SICODIF"/>
+    <put name="content" value="/layout/Blank.jsp"/>
+  </definition>
+
+  <definition name="ser.classic" path="/layout/ClassicLayout.jsp">
+    <put name="title" value="SICODIF"/>
+    <put name="jscript" value=""/>
+    <put name="header" value="/layout/Header.jsp"/>
+    <put name="content" value="/layout/Blank.jsp"/>
+    <put name="menu" value="/layout/Blank.jsp"/>
+    <put name="footer" value="/layout/Footer.jsp"/>
+  </definition>
+
+  <definition name="ser.home" extends="ser.classic">
+    <put name="menu" value="/layout/MenuLayout.jsp"/>
+    <put name="content" value="/inicio.jsp"/>
+  </definition>
+
+  <definition name="ser.rep" extends="ser.page">
+    <put name="content" value="/inicio.jsp"/>
+  </definition>
+
+  <definition name="fis.reg.cdi" extends="ser.home">
+    <put name="content" value="/fis_registra.jsp"/>
+  </definition>
+
+  <definition name="fis.reg.not" extends="ser.home">
+    <put name="content" value="/fis_notifica.jsp"/>
+  </definition> 
+  
+  <definition name="fis.reg.res" extends="ser.home">
+    <put name="content" value="/fis_resultados.jsp"/>
+  </definition>
+  
+  <definition name="fis.reg.rec" extends="ser.home">
+    <put name="content" value="/fis_recibo.jsp"/>
+  </definition>
+
+  <definition name="fis.reg.fin" extends="ser.home">
+    <put name="content" value="/fis_finaliza.jsp"/>
+  </definition> 
+
+  <definition name="fis.reg.fnd" extends="ser.home">
+    <put name="content" value="/fis_docconclusion.jsp"/>
+  </definition> 
+
+  <definition name="fis.reg.eul" extends="ser.home">
+    <put name="content" value="/fis_enviolegal.jsp"/>
+  </definition> 
+
+
+
+  <definition name="enm.reg.not" extends="ser.home">
+    <put name="content" value="/fis_notifica_enm.jsp"/>
+  </definition> 
+  
+  <definition name="enm.reg.res" extends="ser.home">
+    <put name="content" value="/fis_resultados_enm.jsp"/>
+  </definition>
+  
+  <definition name="enm.reg.rec" extends="ser.home">
+    <put name="content" value="/fis_recibo_enm.jsp"/>
+  </definition>
+
+  <definition name="enm.reg.fin" extends="ser.home">
+    <put name="content" value="/fis_finaliza_enm.jsp"/>
+  </definition> 
+
+  <definition name="enm.reg.fnd" extends="ser.home">
+    <put name="content" value="/fis_docconclusion_enm.jsp"/>
+  </definition> 
+
+  <definition name="enm.reg.eul" extends="ser.home">
+    <put name="content" value="/fis_enviolegal_enm.jsp"/>
+  </definition> 
+
+  <definition name="enm.reg.fis" extends="ser.home">
+    <put name="content" value="/fis_fiscalizador_enm.jsp"/>
+  </definition>
+
+
+
+  <definition name="fis.rep.mer" extends="ser.home">
+    <put name="content" value="/fis_r_mercaderia.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.pag" extends="ser.home">
+    <put name="content" value="/fis_r_pagados.jsp"/>
+  </definition> 
+
+  <definition name="fis.rep.nop" extends="ser.home">
+    <put name="content" value="/fis_r_nopagados.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.fis" extends="ser.home">
+    <put name="content" value="/fis_r_fiscalizadores.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.mer2" extends="ser.home">
+    <put name="content" value="/fis_r_mercaderiaGer.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.pag2" extends="ser.home">
+    <put name="content" value="/fis_r_pagadosGer.jsp"/>
+  </definition> 
+
+  <definition name="fis.rep.nop2" extends="ser.home">
+    <put name="content" value="/fis_r_nopagadosGer.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.fis2" extends="ser.home">
+    <put name="content" value="/fis_r_fiscalizadoresGer.jsp"/>
+  </definition> 
+  
+  
+  <definition name="fis.dec.asi" extends="ser.home">
+    <put name="content" value="/fis_decasig.jsp"/>
+  </definition> 
+  
+  <definition name="fis.dec.fis" extends="ser.home">
+    <put name="content" value="/fis_decfis.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.ord" extends="ser.reporte">
+    <put name="content" value="/fis_reporte_orden.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.ord2" extends="ser.home">
+    <put name="content" value="/fis_reporte_orden.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.err" extends="ser.reporte">
+    <put name="content" value="/Error.jsp"/>
+  </definition> 
+  
+  <definition name="fis.cam.usu" extends="ser.home">
+    <put name="jscript" value="jscript/reginf.js"/>
+    <put name="content" value="/UsuarioCambio.jsp"/>
+  </definition>  
+  
+  
+  
+   
+  <definition name="fis.rep.base" extends="ser.home">
+    <put name="content" value="/fis_r_base.jsp"/>
+  </definition> 
+  
+  
+  <definition name="fis.rep.base_rep" extends="ser.reporte">
+    <put name="content" value="/fis_r_base_rep.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.rec" extends="ser.home">
+    <put name="content" value="/fis_r_recaudaciones.jsp"/>
+  </definition> 
+    
+  <definition name="fis.rep.detrec" extends="ser.home">
+    <put name="content" value="/fis_r_detrecaudaciones.jsp"/>
+  </definition>
+  
+  <definition name="fis.anu.controldif" extends="ser.home">
+    <put name="content" value="/fis_anu_controldif.jsp"/>
+  </definition>  
+  
+  <definition name="fis.rep.det_recaud" extends="ser.reporte">
+    <put name="content" value="/fis_rep_det_recaud.jsp"/>
+  </definition> 
+  
+  <definition name="reg.cierre.cdif" extends="ser.home">
+    <put name="content" value="/fis_cierre_contr_dif.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.sincanal" extends="ser.home">
+    <put name="content" value="/fis_rep_sin_canal.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.concesionario" extends="ser.home">
+    <put name="content" value="/fis_r_concesionario.jsp"/>
+  </definition>  
+  
+  <definition name="fis.rep.enm" extends="ser.home">
+    <put name="content" value="/fis_r_enmiendas.jsp"/>
+  </definition> 
+
+  <definition name="fis.rep.enm2" extends="ser.home">
+    <put name="content" value="/fis_r_enmiendas.jsp"/>
+  </definition> 
+  
+</tiles-definitions>

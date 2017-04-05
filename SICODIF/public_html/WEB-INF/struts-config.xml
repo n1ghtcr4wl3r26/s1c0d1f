@@ -1,0 +1,265 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="inputActionForm" type="sicodif.inputActionForm"/>
+    <form-bean name="beanMenu" type="sicodif.MenuForm"/>
+    <form-bean name="FisRegistroForm" type="sicodif.FisRegistroForm"/>
+    <form-bean name="FisDeclaracionForm" type="sicodif.FisDeclaracionForm"/>
+    <form-bean name="FisNotificaForm" type="sicodif.FisNotificaForm"/>
+    <form-bean name="FisResultadosForm" type="sicodif.FisResultadosForm"/>
+    <form-bean name="FisReciboForm" type="sicodif.FisReciboForm"/>
+    <form-bean name="FisFinalizaForm" type="sicodif.FisFinalizaForm"/>
+    
+    <form-bean name="FisDocConclusionForm" type="sicodif.FisDocConclusionForm"/>
+    <form-bean name="FisEnvioLegalForm" type="sicodif.FisEnvioLegalForm"/>
+    
+    <form-bean name="FisRmercaderiaForm" type="sicodif.FisRmercaderiaForm"/>
+    <form-bean name="FisRpagadosForm" type="sicodif.FisRpagadosForm"/>
+    <form-bean name="FisRnopagadosForm" type="sicodif.FisRnopagadosForm"/>
+    
+    <form-bean name="FisDecAsigForm" type="sicodif.FisDecAsigForm"/>
+    <form-bean name="FisDecFisForm" type="sicodif.FisDecFisForm"/>
+    
+    <form-bean name="FisConsultaForm" type="sicodif.FisConsultaForm"/>
+    
+    
+    <form-bean name="FisFiscalizadorEnmForm" type="sicodif.FisFiscalizadorEnmForm"/>
+    
+    <form-bean name="CambioForm" type="sicodif.CambioForm"/>
+    
+    <form-bean name="FisRbaseForm" type="sicodif.FisRbaseForm"/>
+    <form-bean name="FisRfiscalizadoresForm" type="sicodif.FisRfiscalizadoresForm"/>
+    <form-bean name="FisRrecaudacionesForm" type="sicodif.FisRrecaudacionesForm"/>
+    
+    <form-bean name="FisRdetRecaudacionesForm" type="sicodif.FisRdetRecaudacionesForm"/>
+    <form-bean name="FisAnulControldifForm" type="sicodif.FisAnulControldifForm"/>
+    <form-bean name="FisCierreContDifForm" type="sicodif.FisCierreContDifForm"/>
+    
+    <form-bean name="FisRsincanalForm" type="sicodif.FisRsincanalForm"/>
+    
+    <form-bean name="FisRconcesionarioForm" type="sicodif.FisRconcesionarioForm"/>
+    <form-bean name="FisRenmiendasForm" type="sicodif.FisRenmiendasForm"/>
+       
+  </form-beans>
+  <global-forwards>
+    <forward name="ser.home" path="/ini.do"/>
+    <forward name="exit.ser" path="/exit.do"/> 
+    <forward name="cam.usu" path="/cambia.do"/>
+  </global-forwards>
+  <action-mappings>
+    <action path="/ini" forward="ser.home"/>
+    <action path="/inicio" forward="ser.reg.inf"/>
+    <action path="/CambioAction" forward="fis.cam.usu"/>  
+    
+    
+    <action path="/MenuAction" type="sicodif.MenuAction" name="beanMenu" scope="request">
+      <forward name="reg.cdi" path="fis.reg.cdi"/>   
+      <forward name="reg.not" path="fis.reg.not"/>   
+      <forward name="reg.res" path="fis.reg.res"/>
+      <forward name="reg.rec" path="fis.reg.rec"/>
+      <forward name="reg.fin" path="fis.reg.fin"/>   
+      <forward name="reg.fnd" path="fis.reg.fnd"/>
+      <forward name="reg.eul" path="fis.reg.eul"/>
+      <forward name="rep.mer" path="fis.rep.mer"/>
+      <forward name="rep.pag" path="fis.rep.pag"/>
+      <forward name="rep.nop" path="fis.rep.nop"/>
+      <forward name="rep.mer2" path="fis.rep.mer2"/>
+      <forward name="rep.pag2" path="fis.rep.pag2"/>
+      <forward name="rep.nop2" path="fis.rep.nop2"/>
+      
+      <forward name="exit" path="/input.jsp"/>  
+      <forward name="cam.usu" path="fis.cam.usu"/>
+      <forward name="dec.asi" path="fis.dec.asi"/>
+      <forward name="dec.fis" path="fis.dec.fis"/>
+      
+      <forward name="enm.not" path="enm.reg.not"/> 
+      <forward name="enm.res" path="enm.reg.res"/>
+      <forward name="enm.rec" path="enm.reg.rec"/>
+      <forward name="enm.fin" path="enm.reg.fin"/>   
+      <forward name="enm.fnd" path="enm.reg.fnd"/>
+      <forward name="enm.eul" path="enm.reg.eul"/>
+      
+      <forward name="enm.fis" path="enm.reg.fis"/>
+      
+      <forward name="rep.base" path="fis.rep.base"/>   
+      <forward name="rep.fis" path="fis.rep.fis"/>
+      <forward name="rep.rec" path="fis.rep.rec"/>
+      
+      <forward name="rep.enm" path="fis.rep.enm"/>
+      
+      <forward name="rep.deuda" path="fis.rep.detrec"/>
+      <forward name="anu.contdif" path="fis.anu.controldif"/>
+      <forward name="reg.cierrecontdif" path="reg.cierre.cdif"/>
+      <forward name="fis.rep.sincanal" path="fis.rep.sincanal"/>
+      <forward name="fis.rep.concesionario" path="fis.rep.concesionario"/>
+    </action>
+        
+    <action path="/exit" type="sicodif.SalirAction">
+      <forward name="input" path="/input.jsp"/>
+    </action>
+    
+    <action path="/ingreso" type="sicodif.inputAction" name="inputActionForm" scope="request">
+      <forward name="ok" path="ser.home"/>
+      <forward name="nook" path="/input.jsp"/>
+    </action>
+   
+    <action path="/json" type="sicodif.JSONAction" parameter="parameter"/>
+    <action path="/JqueryServlet" type="sicodif.JqueryServlet" parameter="parameter"/>
+    
+    <action path="/FisRegistro" type="sicodif.FisRegistroAction" name="FisRegistroForm" scope="request">
+      <forward name="volver" path="fis.reg.cdi"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+     
+    <action path="/FisNotifica" type="sicodif.FisNotificaAction" name="FisNotificaForm" scope="request">
+      <forward name="volver" path="fis.reg.not"/>
+      <forward name="inicio" path="/input.jsp"/>
+      <forward name="volver2" path="enm.reg.not"/>
+    </action>
+    
+    <action path="/FisResultados" type="sicodif.FisResultadosAction" name="FisResultadosForm" scope="request">
+      <forward name="volver" path="fis.reg.res"/>
+      <forward name="inicio" path="/input.jsp"/>
+      <forward name="volver2" path="enm.reg.res"/>
+    </action>
+    
+    <action path="/FisRecibo" type="sicodif.FisReciboAction" name="FisReciboForm" scope="request">
+      <forward name="volver" path="fis.reg.rec"/>
+      <forward name="inicio" path="/input.jsp"/>
+      <forward name="volver2" path="enm.reg.rec"/>
+    </action>
+     
+    <action path="/FisFinaliza" type="sicodif.FisFinalizaAction" name="FisFinalizaForm" scope="request">
+      <forward name="volver" path="fis.reg.fin"/>
+      <forward name="inicio" path="/input.jsp"/>
+      <forward name="volver2" path="enm.reg.fin"/>
+    </action>
+    
+    <action path="/FisDocConclusion" type="sicodif.FisDocConclusionAction" name="FisDocConclusionForm" scope="request">
+      <forward name="volver" path="fis.reg.fnd"/>
+      <forward name="inicio" path="/input.jsp"/>
+      <forward name="volver2" path="enm.reg.fnd"/>
+    </action>
+    
+    <action path="/FisEnvioLegal" type="sicodif.FisEnvioLegalAction" name="FisEnvioLegalForm" scope="request">
+      <forward name="volver" path="fis.reg.eul"/>
+      <forward name="inicio" path="/input.jsp"/>
+      <forward name="volver2" path="enm.reg.eul"/>
+    </action>
+    
+    <action path="/FisRmercaderia" type="sicodif.FisRmercaderiaAction" name="FisRmercaderiaForm" scope="request">
+      <forward name="volver" path="fis.rep.mer"/>
+      <forward name="volver2" path="fis.rep.mer2"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+    
+    
+    <action path="/FisRpagados" type="sicodif.FisRpagadosAction" name="FisRpagadosForm" scope="request">
+      <forward name="volver" path="fis.rep.pag"/>
+      <forward name="volver2" path="fis.rep.pag2"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+    <action path="/FisRnopagados" type="sicodif.FisRnopagadosAction" name="FisRnopagadosForm" scope="request">
+      <forward name="volver" path="fis.rep.nop"/>
+      <forward name="volver2" path="fis.rep.nop2"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+    <action path="/CambioAction" type="sicodif.CambioAction" name="CambioForm" scope="request">
+      <forward name="usuario" path="/input.jsp"/>
+      <forward name="cambio" path="fis.cam.usu"/>
+    </action>
+    
+    <action path="/cambia" type="sicodif.CambiaAction">
+      <forward name="cambio" path="fis.cam.usu"/>
+    </action>
+    
+    
+    <action path="/FisDecAsig" type="sicodif.FisDecAsigAction" name="FisDecAsigForm" scope="request">
+      <forward name="volver" path="fis.dec.asi"/>
+      <forward name="inicio" path="/input.jsp"/>
+      <forward name="reporte" path="fis.rep.ord2"/> 
+    </action>
+    
+    <action path="/FisDecFis" type="sicodif.FisDecFisAction" name="FisDecFisForm" scope="request">
+      <forward name="volver" path="fis.dec.fis"/>
+      <forward name="reporte" path="fis.rep.ord"/> 
+      <forward name="error" path="fis.rep.err"/> 
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+    <action path="/FisFiscalizadorEnm" type="sicodif.FisFiscalizadorEnmAction" name="FisFiscalizadorEnmForm" scope="request">
+      <forward name="volver" path="enm.reg.fis"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+
+        
+    <action path="SalirAction1" type="sicodif.SalirAction"/> 
+    
+    
+    <action path="/FisRbase" type="sicodif.FisRbaseAction" name="FisRbaseForm" scope="request">
+      <forward name="volver" path="fis.rep.base"/>
+      <forward name="reporte" path="fis.rep.base_rep"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+    
+    <action path="/FisRfiscalizadores" type="sicodif.FisRfiscalizadoresAction" name="FisRfiscalizadoresForm" scope="request">
+      <forward name="volver" path="fis.rep.fis"/>
+      <forward name="volver2" path="fis.rep.fis2"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+    <action path="/FisRrecaudaciones" type="sicodif.FisRrecaudacionesAction" name="FisRrecaudacionesForm" scope="request">
+      <forward name="volver" path="fis.rep.rec"/>
+      <forward name="volver2" path="fis.rep.rec2"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+    <action path="/FisRdetrecaudaciones" type="sicodif.FisRdetRecaudacionesAction" name="FisRdetRecaudacionesForm" scope="request">
+      <forward name="repDetrecaudaciones" path="fis.rep.det_recaud"/>
+      <forward name="volver" path="fis.rep.detrec"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+    <action path="/FisAnulacioncontroldif" type="sicodif.FisAnulControldifAction" name="FisAnulControldifForm" scope="request">
+      <forward name="volver" path="fis.anu.controldif"/>
+      <forward name="inicio" path="/input.jsp"/>
+      <forward name="anulControlDiferido" path="fis.anu.controldif"/>
+    </action>
+    
+    <action path="/FisCierreContDif" type="sicodif.FisCierreContDifAction" name="FisCierreContDifForm" scope="request">
+      <forward name="volver" path="reg.cierre.cdif"/>
+      <forward name="inicio" path="/input.jsp"/>
+      <forward name="volver2" path="enm.reg.fin"/>
+    </action>    
+    
+    <action path="/FisSinCanal" type="sicodif.FisRsincanalAction" name="FisRsincanalForm" scope="request">
+      <forward name="fis.rep.sincanal" path="fis.rep.sincanal"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+    <action path="/FisRconcesionario" type="sicodif.FisRconcesionarioAction" name="FisRconcesionarioForm" scope="request">
+      <forward name="fis.rep.concesionario" path="fis.rep.concesionario"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+    <action path="/FisRenmiendas" type="sicodif.FisRenmiendasAction" name="FisRenmiendasForm" scope="request">
+      <forward name="volver" path="fis.rep.enm"/>
+      <forward name="volver2" path="fis.rep.enm2"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+  </action-mappings>
+  <message-resources parameter="sicodif.ApplicationResources"/>
+  <plug-in className="org.apache.struts.tiles.TilesPlugin">
+    <set-property value="/WEB-INF/tiles-defs.xml" property="definitions-config"/>
+    <set-property value="2" property="definitions-debug"/>
+    <set-property value="1" property="definitions-parser-details"/>
+    <set-property value="true" property="definitions-parse-validate"/>
+  </plug-in>
+ 
+</struts-config>

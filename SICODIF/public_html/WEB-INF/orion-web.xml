@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE orion-web-app PUBLIC "-//Evermind//DTD Orion Web Application 2.3//EN" "http://xmlns.oracle.com/ias/dtds/orion-web.dtd">
+<orion-web-app jsp-cache-directory="./persistence" temporary-directory="./temp"
+               internationalize-resources="false"
+               default-mime-type="application/octet-stream"
+               servlet-webdir="/servlet/">
+  <virtual-directory real-path="e:\datos\sicodif\" virtual-path="/carpetaweb"/> 
+</orion-web-app>

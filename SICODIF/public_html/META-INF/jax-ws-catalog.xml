@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://172.16.2.58:7001/wsGestionUsuario/serviciosUsuario?WSDL#%7Bhttp%3A%2F%2Fgestionusuario%2F%7DserviciosUsuario"
+          uri="http://172.16.2.58:7001/wsGestionUsuario/serviciosUsuario?wsdl"/>
+</catalog>
