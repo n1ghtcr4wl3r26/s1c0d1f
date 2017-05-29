@@ -223,7 +223,7 @@ catch(Exception ex)
 %>
          
           
-         <h2>ENMIENDA FINALIZAR CONTROL DIFERIDO</h2>
+         <h2>ENMIENDA CONCLUIR CONTROL DIFERIDO</h2>
          
         <br/>
         <div id="form_registro">
