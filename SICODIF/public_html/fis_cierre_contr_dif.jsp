@@ -283,7 +283,7 @@ catch(Exception ex)
                     if(!(bean.getEstado()==null))
                     { 
                         %><fieldset><%=bean.getDeclaracion()%></fieldset><%
-                         if(bean.getUsuario().equals(bean.getFiscalizador()))
+                         if(bean.getUsuario().equals(bean.getUsuario()))
                         {
                         
                                                 

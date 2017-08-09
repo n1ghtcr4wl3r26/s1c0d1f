@@ -52,6 +52,8 @@ public class FisResultadosForm extends ActionForm
     
     private String fobinicial;
     private String fobfinal;
+    
+    private String observacionenm;
   /**
    * Reset all properties to their default values.
    * @param mapping The ActionMapping used to select this instance.
@@ -354,5 +356,13 @@ public class FisResultadosForm extends ActionForm
 
     public String getFobfinal() {
         return fobfinal;
+    }
+
+    public void setObservacionenm(String observacionenm) {
+        this.observacionenm = observacionenm;
+    }
+
+    public String getObservacionenm() {
+        return observacionenm;
     }
 }

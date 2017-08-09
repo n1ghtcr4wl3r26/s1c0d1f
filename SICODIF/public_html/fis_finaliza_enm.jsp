@@ -274,7 +274,7 @@ catch(Exception ex)
                     if(!(bean.getEstado()==null))
                     { 
                         %><fieldset><%=bean.getDeclaracion()%></fieldset> <%
-                         if (bean.getEstado().equals("FINALIZADO")||bean.getEstado().equals("NOTIFICADO CONCLUIDO")||bean.getEstado().equals("ENVIO LEGAL"))
+                         if (bean.getEstado().equals("CIERRE")||bean.getEstado().equals("FINALIZADO")||bean.getEstado().equals("NOTIFICADO CONCLUIDO")||bean.getEstado().equals("ENVIO LEGAL"))
                         {                        
                         %>
                           <fieldset>

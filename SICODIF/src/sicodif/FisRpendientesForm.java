@@ -7,10 +7,10 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 
 
-public class FisNotificaForm extends ActionForm 
-{
+public class FisRpendientesForm extends ActionForm {
+
     private String nrofis;
-    
+
     private String key_year;
     private String key_cuo;
     private String reg_serial;
@@ -19,39 +19,25 @@ public class FisNotificaForm extends ActionForm
     private String declaracion;
     private String estado;
     private String tipo;
-    
-    private String fecha_registro_control;
+
+    private String reporte;
+
+
+    private String gerencia;
+    private String fec_desde;
+    private String fec_hasta;
+
 
     private String usuario;
     private String boton;
     private String mensaje;
     private String fiscalizador;
-    
+
     private String etapa;
-    private String cdgerencia;
-    private String observacionenm;
 
-  /**
-   * Reset all properties to their default values.
-   * @param mapping The ActionMapping used to select this instance.
-   * @param request The HTTP Request we are processing.
-   */
-  public void reset(ActionMapping mapping, HttpServletRequest request)
-  {
-    super.reset(mapping, request);
-  }
-
-  /**
-   * Validate all properties to their default values.
-   * @param mapping The ActionMapping used to select this instance.
-   * @param request The HTTP Request we are processing.
-   * @return ActionErrors A list of all errors found.
-   */
-  public ActionErrors validate(ActionMapping mapping, HttpServletRequest request)
-  {
-    return super.validate(mapping, request);
-  }
-
+    public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
+        return super.validate(mapping, request);
+    }
 
     public void setNrofis(String nrofis) {
         this.nrofis = nrofis;
@@ -83,30 +69,6 @@ public class FisNotificaForm extends ActionForm
 
     public String getReg_serial() {
         return reg_serial;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setBoton(String boton) {
-        this.boton = boton;
-    }
-
-    public String getBoton() {
-        return boton;
-    }
-
-    public void setMensaje(String mensaje) {
-        this.mensaje = mensaje;
-    }
-
-    public String getMensaje() {
-        return mensaje;
     }
 
     public void setFecha_notificacion(String fecha_notificacion) {
@@ -149,6 +111,62 @@ public class FisNotificaForm extends ActionForm
         return tipo;
     }
 
+    public void setReporte(String reporte) {
+        this.reporte = reporte;
+    }
+
+    public String getReporte() {
+        return reporte;
+    }
+
+    public void setGerencia(String gerencia) {
+        this.gerencia = gerencia;
+    }
+
+    public String getGerencia() {
+        return gerencia;
+    }
+
+    public void setFec_desde(String fec_desde) {
+        this.fec_desde = fec_desde;
+    }
+
+    public String getFec_desde() {
+        return fec_desde;
+    }
+
+    public void setFec_hasta(String fec_hasta) {
+        this.fec_hasta = fec_hasta;
+    }
+
+    public String getFec_hasta() {
+        return fec_hasta;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setBoton(String boton) {
+        this.boton = boton;
+    }
+
+    public String getBoton() {
+        return boton;
+    }
+
+    public void setMensaje(String mensaje) {
+        this.mensaje = mensaje;
+    }
+
+    public String getMensaje() {
+        return mensaje;
+    }
+
     public void setFiscalizador(String fiscalizador) {
         this.fiscalizador = fiscalizador;
     }
@@ -157,35 +175,11 @@ public class FisNotificaForm extends ActionForm
         return fiscalizador;
     }
 
-    public void setFecha_registro_control(String fecha_registro_control) {
-        this.fecha_registro_control = fecha_registro_control;
-    }
-
-    public String getFecha_registro_control() {
-        return fecha_registro_control;
-    }
-
     public void setEtapa(String etapa) {
         this.etapa = etapa;
     }
 
     public String getEtapa() {
         return etapa;
-    }
-
-    public void setCdgerencia(String cdgerencia) {
-        this.cdgerencia = cdgerencia;
-    }
-
-    public String getCdgerencia() {
-        return cdgerencia;
-    }
-
-    public void setObservacionenm(String observacionenm) {
-        this.observacionenm = observacionenm;
-    }
-
-    public String getObservacionenm() {
-        return observacionenm;
     }
 }

@@ -365,6 +365,7 @@ catch(Exception ex)
                                  <html:option value="CONTRAVENCION ADUANERA">CONTRAVENCION ADUANERA</html:option>
                                  <html:option value="CONTRABANDO CONTRAVENCIONAL">CONTRABANDO CONTRAVENCIONAL</html:option>
                                  <html:option value="CONTRABANDO DELITO">CONTRABANDO DELITO</html:option>
+                                 <html:option value="MULTA POR ABANDONO">MULTA POR ABANDONO</html:option>
                                  </html:select>
                             </td></tr>
                             

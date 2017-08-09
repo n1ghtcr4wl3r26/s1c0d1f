@@ -40,7 +40,9 @@
     
     <form-bean name="FisRconcesionarioForm" type="sicodif.FisRconcesionarioForm"/>
     <form-bean name="FisRenmiendasForm" type="sicodif.FisRenmiendasForm"/>
-       
+    <form-bean name="FisRconcierreForm" type="sicodif.FisRconcierreForm"/>
+    <form-bean name="FisRpendientesForm" type="sicodif.FisRpendientesForm"/>
+    <form-bean name="FisRconblockForm" type="sicodif.FisRconblockForm"/>
   </form-beans>
   <global-forwards>
     <forward name="ser.home" path="/ini.do"/>
@@ -93,6 +95,10 @@
       <forward name="reg.cierrecontdif" path="reg.cierre.cdif"/>
       <forward name="fis.rep.sincanal" path="fis.rep.sincanal"/>
       <forward name="fis.rep.concesionario" path="fis.rep.concesionario"/>
+      
+      <forward name="rep.con.cierre" path="fis.rep.concierre"/>
+      <forward name="rep.bloq" path="fis.rep.conblock"/>
+      <forward name="rep.pen" path="fis.rep.pendientes"/>
     </action>
         
     <action path="/exit" type="sicodif.SalirAction">
@@ -250,6 +256,25 @@
     <action path="/FisRenmiendas" type="sicodif.FisRenmiendasAction" name="FisRenmiendasForm" scope="request">
       <forward name="volver" path="fis.rep.enm"/>
       <forward name="volver2" path="fis.rep.enm2"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+    <action path="/FisRconcierre" type="sicodif.FisRconcierreAction" name="FisRconcierreForm" scope="request">
+      <forward name="volver" path="fis.rep.concierre"/>
+      <forward name="reporte" path="fis.rep.concierre_rep"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+    
+    <action path="/FisRpendientes" type="sicodif.FisRpendientesAction" name="FisRpendientesForm" scope="request">
+      <forward name="volver" path="fis.rep.pendientes"/>
+      <forward name="volver2" path="fis.rep.pendientes_rep"/>
+      <forward name="inicio" path="/input.jsp"/>
+    </action>
+    
+     <action path="/FisRconblock" type="sicodif.FisRconblockAction" name="FisRconblockForm" scope="request">
+      <forward name="volver" path="fis.rep.conblock"/>
+      <forward name="reporte" path="fis.rep.conblock_rep"/>
       <forward name="inicio" path="/input.jsp"/>
     </action>
     

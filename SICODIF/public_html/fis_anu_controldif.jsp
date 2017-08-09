@@ -6,8 +6,6 @@
 <%@ page import="java.sql.*, oracle.jdbc.driver.*, java.util.*, java.text.*"%>
 <%@ page import="oracle.jdbc.OracleTypes"%>
 <%@ page contentType="text/html;charset=iso-8859-1"%>
-
-
 <script language="JavaScript" type="text/JavaScript" src="js/datetimepicker_css.js"></script>
 <script language="JavaScript" type="text/JavaScript" src="js/fis_anu_controldif.js"></script>
 
@@ -97,12 +95,10 @@ catch(Exception ex)
                     if(!(bean.getEstado()==null))
                     { 
                         %><fieldset><%=bean.getDeclaracion()%></fieldset>
-                         <%
-                         if (bean.getEstado().equals("ASIGNADO")||bean.getEstado().equals("RESULTADOS")||bean.getEstado().equals("REGISTRADO")||bean.getEstado().equals("REGISTRADO-MIRA")||bean.getEstado().equals("NOTIFICADO"))
+                        <%
+                        if (bean.getEstado().equals("ASIGNADO")||bean.getEstado().equals("RESULTADOS")||bean.getEstado().equals("REGISTRADO")||bean.getEstado().equals("REGISTRADO-MIRA")||bean.getEstado().equals("NOTIFICADO"))
                         {                        
                         %>
-                        
-                        
                          <fieldset>
                          <table width="90%">
                             <tr><td width="7%">Fecha Anulaci&oacute;n:</td>

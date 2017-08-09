@@ -91,7 +91,9 @@
           }
       }
       
-     
+     if(!fTrim($('#observacionenm').val())){
+        Mensaje = Mensaje + "'Observaci\363n Enmienda' es obligatorio";
+      }
       
      if( ! fTrim( $('#observacion').val() ) ){
         Mensaje = Mensaje + "'Observaci\363n' es obligatorio\n";
@@ -167,7 +169,6 @@ catch(Exception ex)
             <fieldset>
             <input type="hidden" name="boton" id="boton" />
             <html:hidden property="fecha_registro_control" styleId="fecha_registro_control" />
-            <html:hidden property="declaracion" styleId="declaracion" />
                 <table >
                     <tr>
                         <td height="35" >
@@ -213,7 +214,7 @@ catch(Exception ex)
                     { 
                         %><fieldset><%=bean.getDeclaracion()%></fieldset>
                         <%
-                         if (bean.getEstado().equals("NOTIFICADO")||bean.getEstado().equals("RESULTADOS")||bean.getEstado().equals("FINALIZADO")||bean.getEstado().equals("NOTIFICADO CONCLUIDO")||bean.getEstado().equals("ENVIO LEGAL"))
+                         if (bean.getEstado().equals("CIERRE")||bean.getEstado().equals("NOTIFICADO")||bean.getEstado().equals("RESULTADOS")||bean.getEstado().equals("FINALIZADO")||bean.getEstado().equals("NOTIFICADO CONCLUIDO")||bean.getEstado().equals("ENVIO LEGAL"))
                         {                        
                         %>
                         
@@ -242,7 +243,16 @@ catch(Exception ex)
                                  <html:option value="CEDULA">CEDULA</html:option>
                                  <html:option value="EDICTO">EDICTO</html:option>
                                  <html:option value="TACITO">TACITO</html:option>
+                                 <html:option value="ELECTRONICA">ELECTRONICA</html:option>
                                  </html:select>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>
+                                    Observaci&oacute;n Enmienda:
+                                </td>
+                                <td colspan="2">
+                                    <html:text property="observacionenm" style="width:300px" maxlength="200" styleId="observacionenm"/>
                                 </td>
                             </tr>
                             <tr>

@@ -152,8 +152,8 @@
             if ( !ComparaFechas($('#fec_doc_con').val(),diames + "/" + mes + "/" + ano))
                  Mensaje = Mensaje + "'Fecha Documento Conclusi\363n' no puede ser mayor a la de hoy. \n";
             if ( $('#sw').val()== "0")
-                if ( !ComparaFechas(diames3 + "/" + mes3 + "/" + ano3, $('#fec_doc_con').val()))
-                    Mensaje = Mensaje + "'Fecha Documento Conclusi\363n' no puede anterior a 3 dias de la fecha actual. \n";
+                if ( !ComparaFechas($('#fechavenc').val(), $('#fec_doc_con').val()))
+                    Mensaje = Mensaje + "'Fecha Documento Conclusi\363n' no puede ser anterior a 3 dias de la fecha actual. \n";
           }
       }
       
@@ -218,13 +218,14 @@ catch(Exception ex)
 %>
          
           
-         <h2>CONCLUIR CONTROL DIFERIDO</h2>
+         <h2>FINALIZAR CONTROL DIFERIDO</h2>
          
         <br/>
         <div id="form_registro">
             <fieldset>
             <input type="hidden" name="boton" id="boton" />
             <html:hidden property="fecha_liquidacion" styleId="fecha_liquidacion" />
+            <html:hidden property="fechavenc" styleId="fechavenc" />
             <html:hidden property="sw" styleId="sw" />
                 <table >
                     <tr>

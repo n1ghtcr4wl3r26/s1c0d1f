@@ -13,7 +13,7 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessages;
 
 
-public class FisRconcesionarioAction extends Action {
+public class FisRpendientesAction extends Action {
     /**
      * This is the main action called from the Struts framework.
      * @param mapping The ActionMapping used to select this instance.
@@ -24,7 +24,7 @@ public class FisRconcesionarioAction extends Action {
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
                                  HttpServletResponse response) throws IOException, ServletException {
 
-        FisRconcesionarioForm bean = (FisRconcesionarioForm)request.getAttribute("FisRconcesionarioForm");
+        FisRpendientesForm bean = (FisRpendientesForm)request.getAttribute("FisRpendientesForm");
         FisDeclaracionForm dui = new FisDeclaracionForm();
         ActionMessages error = new ActionMessages();
 
@@ -32,13 +32,29 @@ public class FisRconcesionarioAction extends Action {
         bean.setUsuario((String)request.getSession().getAttribute("user.nick"));
         String gerencia = (String)request.getSession().getAttribute("user.gerencia");
         String res;
-        
-        request.setAttribute("FisRconcesionarioForm", bean);
-        
-        String link = "fis.rep.concesionario";
-      
-        
-        
+
+        String link = "volver";
+        if (bean.getReporte().equals("regional"))
+            link = "volver2";
+
+
+        if (usuario != null) {
+            if (bean.getBoton().equals("consultar")) {
+                bean.setDeclaracion(Util.TablaReporte1(bean.getGerencia(), bean.getFec_desde(), bean.getFec_hasta()));
+                bean.setEstado("CORRECTO");
+                link = "volver";
+            } else
+
+            if (bean.getBoton().equals("consultar2")) {
+                bean.setDeclaracion(Util.TablaReporte1(gerencia, bean.getFec_desde(), bean.getFec_hasta()));
+                bean.setEstado("CORRECTO");
+                link = "volver2";
+            } else {
+                link = "inicio";
+            }
+        }
+
+
         return mapping.findForward(link);
     }
 }

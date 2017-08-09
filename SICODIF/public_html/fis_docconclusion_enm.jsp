@@ -42,8 +42,7 @@
           if( ! foNumero( $('#reg_serial').val() ) ){
             Mensaje = Mensaje + "'N\372mero' debe ser un n\372mero\n";
           } 
-      }
-    
+      }      
     
       if( Mensaje == "" )
       {
@@ -91,7 +90,9 @@ var fecha=new Date();
           }
       }
             
-      
+      if(!fTrim($('#observacionenm').val())){
+        Mensaje = Mensaje + "'Observaci\363n Enmienda' es obligatorio";
+      }
        if( ! fTrim( $('#tip_not_doc').val() ) ){
         Mensaje = Mensaje + "'Tipo de Notificaci\363n' es obligatorio\n";
       }
@@ -246,7 +247,14 @@ catch(Exception ex)
                                  </html:select>
                                 </td>
                             </tr>
-                            
+                            <tr>
+                                <td>
+                                    Observaci&oacute;n Enmienda:
+                                </td>
+                                <td>
+                                    <html:text property="observacionenm" style="width:300px" maxlength="200" styleId="observacionenm"/>
+                                </td>
+                            </tr>
                             
                             <tr>
                                <td colspan="2" height="40px" width="60%">

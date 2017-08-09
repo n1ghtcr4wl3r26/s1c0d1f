@@ -50,6 +50,8 @@ public class FisFinalizaForm extends ActionForm {
     private String justificativo;
     
     private String observacionenm;
+    
+    private String fechavenc;
 
     /**
      * Reset all properties to their default values.
@@ -317,5 +319,13 @@ public class FisFinalizaForm extends ActionForm {
 
     public String getObservacionenm() {
         return observacionenm;
+    }
+
+    public void setFechavenc(String fechavenc) {
+        this.fechavenc = fechavenc;
+    }
+
+    public String getFechavenc() {
+        return fechavenc;
     }
 }

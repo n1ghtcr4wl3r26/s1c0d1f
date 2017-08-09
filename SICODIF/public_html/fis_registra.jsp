@@ -111,7 +111,6 @@ catch(Exception ex)
         <div id="form_registro">
             <fieldset>
             <input type="hidden" name="boton" id="boton" />
-            <html:hidden property="declaracion" styleId="declaracion" />
                 <table >
                     <tr>
                         <td height="35" >

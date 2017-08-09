@@ -167,7 +167,6 @@ catch(Exception ex)
             <fieldset>
             <input type="hidden" name="boton" id="boton" />
             <html:hidden property="fecha_registro_control" styleId="fecha_registro_control" />
-            <html:hidden property="declaracion" styleId="declaracion" />
                 <table >
                     <tr>
                         <td height="35" >
@@ -243,6 +242,7 @@ catch(Exception ex)
                                  <html:option value="CEDULA">CEDULA</html:option>
                                  <html:option value="EDICTO">EDICTO</html:option>
                                  <html:option value="TACITO">TACITO</html:option>
+                                 <html:option value="ELECTRONICA">ELECTRONICA</html:option>
                                  </html:select>
                                 </td>
                             </tr>

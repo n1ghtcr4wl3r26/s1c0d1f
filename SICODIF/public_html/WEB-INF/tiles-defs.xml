@@ -209,4 +209,28 @@
     <put name="content" value="/fis_r_enmiendas.jsp"/>
   </definition> 
   
+  <definition name="fis.rep.concierre" extends="ser.home">
+    <put name="content" value="/fis_r_concierre.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.concierre_rep" extends="ser.reporte">
+    <put name="content" value="/fis_r_concierre_rep.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.conblock" extends="ser.home">
+    <put name="content" value="/fis_r_conblock.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.conblock_rep" extends="ser.reporte">
+    <put name="content" value="/fis_r_conblock_rep.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.pendientes" extends="ser.home">
+    <put name="content" value="/fis_r_pendientes.jsp"/>
+  </definition> 
+  
+  <definition name="fis.rep.pendientes_rep" extends="ser.home">
+    <put name="content" value="/fis_r_pendientes.jsp"/>
+  </definition> 
+  
 </tiles-definitions>

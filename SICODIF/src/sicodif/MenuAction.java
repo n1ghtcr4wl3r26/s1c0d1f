@@ -140,6 +140,17 @@ public class MenuAction extends Action {
         } else if (bMenu.getOpcion().equals("cam.usu")) {
             direc = "cam.usu";
         
+        
+        } else if (bMenu.getOpcion().equals("rep.con.cierre")) {
+            direc = "rep.con.cierre";
+            
+        } else if (bMenu.getOpcion().equals("rep.bloq")) {
+            direc = "rep.bloq";
+            
+        } else if (bMenu.getOpcion().equals("rep.pen")) {
+            direc = "rep.pen";
+            
+        
         //reporte de Resultados Deuda Determinada   
         } else if (bMenu.getOpcion().equals("rep.deuda")) {
                 FisRdetRecaudacionesForm rep = new FisRdetRecaudacionesForm();

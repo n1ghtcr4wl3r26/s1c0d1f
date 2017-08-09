@@ -6,6 +6,7 @@
 <%@ page import="java.sql.*, oracle.jdbc.driver.*, java.util.*, java.text.*"%>
 <%@ page import="oracle.jdbc.OracleTypes"%>
 <%@ page contentType="text/html;charset=iso-8859-1"%>
+
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function () {
 
@@ -111,7 +112,6 @@
         <div id="form_registro">
             <fieldset>
             <input type="hidden" name="boton" id="boton" />
-            <html:hidden property="declaracion" styleId="declaracion" />
                 <table >
                     <tr>
                         <td height="35" >
@@ -157,7 +157,7 @@
                     { 
                         %><fieldset><%=bean.getDeclaracion()%></fieldset>
                          <%
-                         if (bean.getEstado().equals("REGISTRADO-MIRA")||bean.getEstado().equals("REGISTRADO")||bean.getEstado().equals("ASIGNADO")||bean.getEstado().equals("NOTIFICADO")||bean.getEstado().equals("RESULTADOS")||bean.getEstado().equals("FINALIZADO")||bean.getEstado().equals("NOTIFICADO CONCLUIDO")||bean.getEstado().equals("ENVIO LEGAL"))
+                         if (bean.getEstado().equals("CIERRE")||bean.getEstado().equals("REGISTRADO-MIRA")||bean.getEstado().equals("REGISTRADO")||bean.getEstado().equals("ASIGNADO")||bean.getEstado().equals("NOTIFICADO")||bean.getEstado().equals("RESULTADOS")||bean.getEstado().equals("FINALIZADO")||bean.getEstado().equals("NOTIFICADO CONCLUIDO")||bean.getEstado().equals("ENVIO LEGAL"))
                         {                        
                         %>
                         <fieldset><table width="60%">

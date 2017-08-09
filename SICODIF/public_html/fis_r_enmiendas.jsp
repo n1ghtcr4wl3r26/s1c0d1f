@@ -289,7 +289,7 @@ catch(Exception ex)
                               <th>N&Uacute;MERO DE LA DUI</th>
                               <th>FISCALIZADOR ASIGNADO</th>
                               <th>USUARIO ENMIENDA</th>
-                              <%//<th>TIPO ENMIENDA</th>%>
+                              <th>TIPO ENMIENDA</th>
                               <th style="width:140px;" width="140px">INFORMACI&Oacute;N ANTES DE LA ENMIENDA</th>
                               <th style="width:140px;" width="140px">INFORMACI&Oacute;N DESPUES DE LA ENMIENDA</th>
                               <th style="width:100px;" width="100px">OBSERVACI&Oacute;N ENMIENDA</th>
@@ -305,7 +305,7 @@ catch(Exception ex)
                               <td><%=rss.getString(4)%></td>
                               <td><%=rss.getString(5)%></td>
                               <td><%=rss.getString(6)%></td>
-                              <%//<td><rss.getString(7)></td>%>
+                              <td><%=rss.getString(7)%></td>
                               <td style="width:140px;text-align:left" align="left"><%=rss.getString(8)%></td>
                               <td style="width:140px;text-align:left" align="left"><%=rss.getString(9)%></td>
                               <td style="width:140px;text-align:left" align="left"><%=rss.getString(10)%></td>

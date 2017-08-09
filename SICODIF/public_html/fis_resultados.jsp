@@ -147,14 +147,14 @@
             Mensaje = Mensaje + "'Tributo Omitido IEHD' debe ser un n\372mero\n";
           } 
       }
-     /* if( ! fTrim( $('#sancion').val() ) ){
+      if( ! fTrim( $('#sancion').val() ) ){
         Mensaje = Mensaje + "'Sancion por Omisi\363n de Pago' es obligatorio\n";
       }
       else{
           if( ! foNumero( $('#sancion').val() ) ){
             Mensaje = Mensaje + "'Sancion por Omisi\363n de Pago' debe ser un n\372mero\n";
           } 
-      }*/
+      }
       if( ! fTrim( $('#multaca_ufv').val() ) ){
         Mensaje = Mensaje + "'Multa por Contravenci\363n Aduanera' es obligatorio\n";
       }
@@ -254,13 +254,13 @@ function recupera_ufv() {
     var tributo_ice = new Number($('#tributo_ice').val());
     var tributo_iehd = new Number($('#tributo_iehd').val());
     var valor_ufv = new Number($('#valor_ufv').val().replace(',','.'));
+    var sancion = new Number($('#sancion').val());
     if(valor_ufv == "")
     {
         $('#tributo_ufv_ga').val("");
         $('#tributo_ufv_iva').val("");
         $('#tributo_ufv_ice').val("");
         $('#tributo_ufv_iehd').val("");
-        $('#sancion').val("");
         $('#sancion_ufv').val("");
     }
     else
@@ -269,15 +269,7 @@ function recupera_ufv() {
         $('#tributo_ufv_iva').val(Math.round(tributo_iva/valor_ufv,0));
         $('#tributo_ufv_ice').val(Math.round(tributo_ice/valor_ufv,0));
         $('#tributo_ufv_iehd').val(Math.round(tributo_iehd/valor_ufv,0));
-        
-        var tributo_ufv_ga = new Number($('#tributo_ufv_ga').val());
-        var tributo_ufv_iva = new Number($('#tributo_ufv_iva').val());
-        var tributo_ufv_ice = new Number($('#tributo_ufv_ice').val());
-        var tributo_ufv_iehd = new Number($('#tributo_ufv_iehd').val());
-        
-        
-        $('#sancion').val(tributo_ga+tributo_iva+tributo_ice+tributo_iehd);
-        $('#sancion_ufv').val(Math.round((tributo_ga+tributo_iva+tributo_ice+tributo_iehd)/valor_ufv,0));
+        $('#sancion_ufv').val(Math.round(sancion/valor_ufv,0));
     }    
   };
   
@@ -416,7 +408,7 @@ catch(Exception ex)
                        
                        
                             <tr>
-                               <td >Fecha de Liquidaci&oacute;n:
+                               <td >Fecha de Liquidaci&oacute;n del documento de conclusi&oacute;n (VC-RD):
                                 </td>
                            
                                 <td  >
@@ -519,7 +511,7 @@ catch(Exception ex)
                            
                                 <td >
                                     <center>
-                                        <html:text disabled="true" property="sancion" style="width:100px" maxlength="18" styleId="sancion"/>
+                                        <html:text property="sancion" onblur="calcula_tributo()" style="width:100px" maxlength="18" styleId="sancion"/>
                                     </center>
                                 </td>
                                 <td >
@@ -603,7 +595,7 @@ catch(Exception ex)
                        
                        
                             <tr>
-                                <td >Fecha de Liquidaci&oacute;n:
+                                <td >Fecha de Liquidaci&oacute;n del documento de conclusi&oacute;n (VC-RD):
                                 </td>
                            
                                 <td  >
@@ -690,7 +682,7 @@ catch(Exception ex)
                                 </td>
                             </tr>
                             <tr>
-                               <td >Sancion por Omision de Pago:
+                               <td >Sanci&oacute;n por Omisi&oacute;n de Pago:
                                 </td>
                            
                                 <td >

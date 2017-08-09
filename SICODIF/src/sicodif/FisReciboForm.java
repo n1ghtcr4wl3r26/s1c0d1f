@@ -52,6 +52,8 @@ public class FisReciboForm extends ActionForm
     
     private String etapa;
     private String cdgerencia;
+    
+    private String observacionenm;
   /**
    * Reset all properties to their default values.
    * @param mapping The ActionMapping used to select this instance.
@@ -328,5 +330,13 @@ public class FisReciboForm extends ActionForm
 
     public String getCdgerencia() {
         return cdgerencia;
+    }
+
+    public void setObservacionenm(String observacionenm) {
+        this.observacionenm = observacionenm;
+    }
+
+    public String getObservacionenm() {
+        return observacionenm;
     }
 }

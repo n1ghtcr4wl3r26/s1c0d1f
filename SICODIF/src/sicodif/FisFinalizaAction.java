@@ -28,6 +28,8 @@ public class FisFinalizaAction extends Action {
         FisDeclaracionForm dui = new FisDeclaracionForm();
         ActionMessages error = new ActionMessages();
 
+        bean.setFechavenc(Util.DevuelveFechaVenc("GRL","3"));
+
         String usuario = (String)request.getSession().getAttribute("user.nick");
         bean.setUsuario((String)request.getSession().getAttribute("user.nick"));
         

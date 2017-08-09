@@ -43,7 +43,7 @@
             Mensaje = Mensaje + "'N\372mero' debe ser un n\372mero\n";
           } 
       }
-    
+      
     
       if( Mensaje == "" )
       {
@@ -95,7 +95,9 @@ var fecha=new Date();
        if( ! fTrim( $('#nro_env_legal').val() ) ){
         Mensaje = Mensaje + "'N\372mero de Documento de remisi\363n' es obligatorio\n";
       }
-    
+    if(!fTrim($('#observacionenm').val())){
+        Mensaje = Mensaje + "'Observaci\363n Enmienda' es obligatorio";
+      }
       if( Mensaje == "" )
       {
         $('#boton').val('registrar_enm');
@@ -236,7 +238,14 @@ catch(Exception ex)
                                   
                                 </td>
                             </tr>
-                            
+                            <tr>
+                                <td>
+                                    Observaci&oacute;n Enmienda:
+                                </td>
+                                <td>
+                                    <html:text property="observacionenm" style="width:300px" maxlength="200" styleId="observacionenm"/>
+                                </td>
+                            </tr>
                             <tr>
                                <td colspan="2" height="40px" width="60%">
                                     <center>

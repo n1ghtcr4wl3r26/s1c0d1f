@@ -7,21 +7,26 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 
 
-public class FisDocConclusionForm extends ActionForm 
+public class FisRconblockForm extends ActionForm 
 {
     private String nrofis;
     
     private String key_year;
     private String key_cuo;
+    private String key_cuot;
     private String reg_serial;
+    private String fecha_notificacion;
     private String observacion;
     private String declaracion;
     private String estado;
+    private String tipo;
     
-    private String fecha_doc_con;
+    private String reporte;
     
-    private String fec_not_doc;
-    private String tip_not_doc;
+    
+    private String gerencia;
+    private String fec_desde;
+    private String fec_hasta;
     
 
     private String usuario;
@@ -30,9 +35,12 @@ public class FisDocConclusionForm extends ActionForm
     private String fiscalizador;
     
     private String etapa;
-    private String cdgerencia;
     
-    private String observacionenm;
+    private String nit;
+    private String sad_reg_year;
+    private String sad_reg_nber;
+    
+    
 
   /**
    * Reset all properties to their default values.
@@ -112,6 +120,14 @@ public class FisDocConclusionForm extends ActionForm
         return mensaje;
     }
 
+    public void setFecha_notificacion(String fecha_notificacion) {
+        this.fecha_notificacion = fecha_notificacion;
+    }
+
+    public String getFecha_notificacion() {
+        return fecha_notificacion;
+    }
+
     public void setObservacion(String observacion) {
         this.observacion = observacion;
     }
@@ -136,20 +152,12 @@ public class FisDocConclusionForm extends ActionForm
         return estado;
     }
 
-    public void setFec_not_doc(String fec_not_doc) {
-        this.fec_not_doc = fec_not_doc;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public String getFec_not_doc() {
-        return fec_not_doc;
-    }
-
-    public void setTip_not_doc(String tip_not_doc) {
-        this.tip_not_doc = tip_not_doc;
-    }
-
-    public String getTip_not_doc() {
-        return tip_not_doc;
+    public String getTipo() {
+        return tipo;
     }
 
     public void setFiscalizador(String fiscalizador) {
@@ -160,12 +168,36 @@ public class FisDocConclusionForm extends ActionForm
         return fiscalizador;
     }
 
-    public void setFecha_doc_con(String fecha_doc_con) {
-        this.fecha_doc_con = fecha_doc_con;
+    public void setGerencia(String gerencia) {
+        this.gerencia = gerencia;
     }
 
-    public String getFecha_doc_con() {
-        return fecha_doc_con;
+    public String getGerencia() {
+        return gerencia;
+    }
+
+    public void setFec_desde(String fec_desde) {
+        this.fec_desde = fec_desde;
+    }
+
+    public String getFec_desde() {
+        return fec_desde;
+    }
+
+    public void setFec_hasta(String fec_hasta) {
+        this.fec_hasta = fec_hasta;
+    }
+
+    public String getFec_hasta() {
+        return fec_hasta;
+    }
+
+    public void setReporte(String reporte) {
+        this.reporte = reporte;
+    }
+
+    public String getReporte() {
+        return reporte;
     }
 
     public void setEtapa(String etapa) {
@@ -176,19 +208,35 @@ public class FisDocConclusionForm extends ActionForm
         return etapa;
     }
 
-    public void setCdgerencia(String cdgerencia) {
-        this.cdgerencia = cdgerencia;
+    public void setNit(String nit) {
+        this.nit = nit;
     }
 
-    public String getCdgerencia() {
-        return cdgerencia;
+    public String getNit() {
+        return nit;
     }
 
-    public void setObservacionenm(String observacionenm) {
-        this.observacionenm = observacionenm;
+    public void setSad_reg_year(String sad_reg_year) {
+        this.sad_reg_year = sad_reg_year;
     }
 
-    public String getObservacionenm() {
-        return observacionenm;
+    public String getSad_reg_year() {
+        return sad_reg_year;
+    }
+
+    public void setSad_reg_nber(String sad_reg_nber) {
+        this.sad_reg_nber = sad_reg_nber;
+    }
+
+    public String getSad_reg_nber() {
+        return sad_reg_nber;
+    }
+
+    public void setKey_cuot(String key_cuot) {
+        this.key_cuot = key_cuot;
+    }
+
+    public String getKey_cuot() {
+        return key_cuot;
     }
 }
