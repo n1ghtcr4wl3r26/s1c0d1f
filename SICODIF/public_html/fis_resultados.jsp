@@ -738,6 +738,7 @@ catch(Exception ex)
                                         
                                     </center>
                                 </td>
+                                <td >Valor UFV:  <html:text disabled="true" property="valor_ufv" style="width:100px;text-align:right" maxlength="18" styleId="valor_ufv"/>
                                 </td>
                             </tr>
                             <tr>
