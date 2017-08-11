@@ -292,7 +292,7 @@ catch(Exception ex)
                               <th>TIPO ENMIENDA</th>
                               <th style="width:140px;" width="140px">INFORMACI&Oacute;N ANTES DE LA ENMIENDA</th>
                               <th style="width:140px;" width="140px">INFORMACI&Oacute;N DESPUES DE LA ENMIENDA</th>
-                              <th style="width:100px;" width="100px">OBSERVACI&Oacute;N ENMIENDA</th>
+                              <th style="width:100px;" width="100px">JUSTIFICACI&Oacute;N ENMIENDA</th>
                               <th>FECHA ENMIENDA</th>
                             </tr>
                         <%

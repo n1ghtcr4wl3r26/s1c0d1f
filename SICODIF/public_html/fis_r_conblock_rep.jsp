@@ -38,7 +38,7 @@
     %>
     <div align="center">
         <p></p>
-        <h2>REPORTE DE DECLARACIONES BLOQUEADAS</h2>
+        <h2>DECLARACIONES BLOQUEADAS</h2>
         <div align="left">
             <%
                 if(bean.getBoton().equals("consultar"))
@@ -157,13 +157,13 @@
     </div>
     <table id='backgroun5' cellspacing="0">
         <tr>
-            <th>GERENCIA</th>
-            <th>N&Uacute;MERO DECLARACI&Oacute;N</th>
-            <th>N&Uacute;MERO ORDEN DE CONTROL</th>
-            <th>FECHA BLOQUEO</th>
-            <th>ESTADO</th>
-            <th>FECHA LIBERACI&Oacute;N</th>
-            <th>JUSTIFICACI&Oacute;N DE LA LIBERACI&Oacute;N</th>
+            <th width="10%">GERENCIA</th>
+            <th width="10%">DECLARACI&Oacute;N</th>
+            <th width="10%">ORDEN DE CONTROL</th>
+            <th width="10%">FECHA BLOQUEO</th>
+            <th width="10%">ESTADO</th>
+            <th width="10%">FECHA LIBERACI&Oacute;N</th>
+            <th width="40%">JUSTIFICACI&Oacute;N DE LA LIBERACI&Oacute;N</th>
         </tr>
         <%
                     while(rss != null && rss.next())

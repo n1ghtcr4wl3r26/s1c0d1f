@@ -56,7 +56,7 @@ public class FisEnvioLegalAction extends Action {
                         bean.setMensaje(Util.creamensaje("2", res.substring(5), "6"));
                     } else {
                         bean.setMensaje(Util.creamensaje("3",
-                                                         "Se registr&oacute; exitosamente la Finalizaci&oacute;n del Control Diferido " +
+                                                         "Se registr&oacute; exitosamente la Conclusi&oacute;n del Control Diferido " +
                                                          bean.getNrofis(), "6"));
                         /*bean.setKey_year("");
                         bean.setKey_cuo("");
@@ -94,7 +94,7 @@ public class FisEnvioLegalAction extends Action {
                         bean.setMensaje(Util.creamensaje("2", res.substring(5), "6"));
                     } else {
                         bean.setMensaje(Util.creamensaje("3",
-                                                         "Se registr&oacute; exitosamente la Finalizaci&oacute;n del Control Diferido " +
+                                                         "Se registr&oacute; exitosamente la Conclusi&oacute;n del Control Diferido " +
                                                          bean.getNrofis(), "6"));
                         /*bean.setKey_year("");
                         bean.setKey_cuo("");

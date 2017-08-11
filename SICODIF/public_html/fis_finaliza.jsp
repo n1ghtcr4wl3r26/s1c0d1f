@@ -153,7 +153,7 @@
                  Mensaje = Mensaje + "'Fecha Documento Conclusi\363n' no puede ser mayor a la de hoy. \n";
             if ( $('#sw').val()== "0")
                 if ( !ComparaFechas($('#fechavenc').val(), $('#fec_doc_con').val()))
-                    Mensaje = Mensaje + "'Fecha Documento Conclusi\363n' no puede ser anterior a 3 dias de la fecha actual. \n";
+                    Mensaje = Mensaje + "'Fecha Documento Conclusi\363n' no puede ser mayor a 3 d\355as h\341biles a partir del d\355a siguiente de la fecha del documento de conclusi\363n, respecto a la fecha actual, la menor fecha de registro v\341lida es: "+$('#fechavenc').val()+". \n";
           }
       }
       
@@ -285,7 +285,7 @@ catch(Exception ex)
                        
                         %>
                              <tr>
-                               <td >Seleccione tipo de Documento de Conclusi&oacute;n:
+                               <td >Documento de Conclusi&oacute;n:
                                 </td>
                                 <td >
                                     <html:select property="tip_doc_con" styleId="tip_doc_con">
@@ -299,7 +299,7 @@ catch(Exception ex)
                             </tr>
                             
                             <tr>
-                               <td >Registre N&uacute;mero de Informe:
+                               <td >N&uacute;mero de Informe:
                                 </td>
                                 <td >
                                      <html:text property="nro_inf" style="width:100px" maxlength="30" styleId="nro_inf"/>
@@ -307,7 +307,7 @@ catch(Exception ex)
                                 </td>
                             </tr>
                             <tr>
-                               <td >Registre Fecha de Informe:
+                               <td >Fecha de Informe:
                                 </td>
                                 <td >
                                     <table><tr><td>  <html:text property="fec_inf" style="width:100px" maxlength="10" styleId="fec_inf"/>
@@ -317,7 +317,7 @@ catch(Exception ex)
                                 </td>
                             </tr>
                             <tr>
-                               <td >Registre N&uacute;mero de Documento de Conclusi&oacute;n:
+                               <td >N&uacute;mero de Documento de Conclusi&oacute;n:
                                 </td>
                                 <td >
                                      <html:text property="nro_doc_con" style="width:100px" maxlength="30" styleId="nro_doc_con"/>
@@ -325,7 +325,7 @@ catch(Exception ex)
                                 </td>
                             </tr>
                             <tr>
-                               <td >Registre Fecha de Documento de Conclusi&oacute;n:
+                               <td >Fecha de Documento de Conclusi&oacute;n:
                                 </td>
                                 <td >
                                      <table><tr><td> <html:text property="fec_doc_con" style="width:100px" maxlength="10" styleId="fec_doc_con"/>

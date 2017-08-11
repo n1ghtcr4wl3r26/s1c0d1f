@@ -91,7 +91,7 @@ var fecha=new Date();
       }
             
       if(!fTrim($('#observacionenm').val())){
-        Mensaje = Mensaje + "'Observaci\363n Enmienda' es obligatorio";
+        Mensaje = Mensaje + "'Justificaci&oacute;n Enmienda' es obligatorio";
       }
        if( ! fTrim( $('#tip_not_doc').val() ) ){
         Mensaje = Mensaje + "'Tipo de Notificaci\363n' es obligatorio\n";
@@ -249,10 +249,10 @@ catch(Exception ex)
                             </tr>
                             <tr>
                                 <td>
-                                    Observaci&oacute;n Enmienda:
+                                    Justificaci&oacute;n Enmienda:
                                 </td>
                                 <td>
-                                    <html:text property="observacionenm" style="width:300px" maxlength="200" styleId="observacionenm"/>
+                                    <html:text property="observacionenm" style="width:100%" maxlength="200" styleId="observacionenm"/>
                                 </td>
                             </tr>
                             

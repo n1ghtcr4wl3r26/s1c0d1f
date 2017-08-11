@@ -17,6 +17,37 @@ public class Util {
 
     }
 
+    public static String DevuelveGerenciaCon(String gestion, String aduana, String numero) {
+        conexion dc = new conexion();
+        Connection con = null;
+        CallableStatement call = null;
+        String rs = "OK";
+        ResultSet rss = null;
+        try {
+            con = dc.abrirConexion();
+            call = con.prepareCall("{ ? = call pkg_enmienda.devuelve_gercon (?,?,?) }");
+            call.registerOutParameter(1, OracleTypes.VARCHAR);
+            call.setString(2, gestion);
+            call.setString(3, aduana);
+            call.setString(4, numero);
+            call.execute();
+            rs = (String)call.getObject(1);
+        } catch (Exception er) {
+            rs = "ERROR" + er.toString();
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+                call.close();
+                if (rss != null)
+                    rss.close();
+            } catch (SQLException er) {
+                ;
+            }
+        }
+        return rs;
+    }
+
     public static String DevuelveFechaVenc(String gerencia, String dias) {
         conexion dc = new conexion();
         Connection con = null;
@@ -2239,7 +2270,7 @@ con.prepareCall("{ ? = call pkg_sicodif.finaliza_control_enm (?,?,?, ?,?,?,?,?, 
 
             if (bean.getFecha_finalizacion() != null)
                 rs =
- rs + "<tr><td>Finalizaci&oacute;n</td><td>" + bean.getFecha_finalizacion() + "</td><td>" + bean.getObs_finalizacion() +
+ rs + "<tr><td>Conclusi&oacute;n</td><td>" + bean.getFecha_finalizacion() + "</td><td>" + bean.getObs_finalizacion() +
     "</td><td>" + bean.getUsuario_finalizacion() + "</td></tr>";
 
 

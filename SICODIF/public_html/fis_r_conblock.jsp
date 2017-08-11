@@ -207,7 +207,7 @@ debugger;
                 }
             %>
          
-        <h2>REPORTE DE DECLARACIONES BLOQUEADAS</h2>
+        <h2>DECLARACIONES BLOQUEADAS</h2>
          
         <br/>
         <div id="form_registro">

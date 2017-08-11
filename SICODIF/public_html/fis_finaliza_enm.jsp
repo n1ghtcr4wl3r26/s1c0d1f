@@ -162,7 +162,7 @@ var fecha=new Date();
       
       
       if(!fTrim($('#observacionenm').val())){
-        Mensaje = Mensaje + "'Observaci\363n Enmienda' es obligatorio";
+        Mensaje = Mensaje + "'Justificaci&oacute;n Enmienda' es obligatorio";
       }
       
      
@@ -281,7 +281,7 @@ catch(Exception ex)
                          <table width="100%">
                       
                              <tr>
-                               <td >Seleccione tipo de Documento de Conclusi&oacute;n:
+                               <td >Documento de Conclusi&oacute;n:
                                 </td>
                                 <td >
                                     <html:select property="tip_doc_con" styleId="tip_doc_con">
@@ -295,7 +295,7 @@ catch(Exception ex)
                             </tr>
                             
                             <tr>
-                               <td >Registre N&uacute;mero de Informe:
+                               <td >N&uacute;mero de Informe:
                                 </td>
                                 <td >
                                      <html:text property="nro_inf" style="width:100px" maxlength="30" styleId="nro_inf"/>
@@ -303,7 +303,7 @@ catch(Exception ex)
                                 </td>
                             </tr>
                             <tr>
-                               <td >Registre Fecha de Informe:
+                               <td >Fecha de Informe:
                                 </td>
                                 <td >
                                     <table><tr><td>  <html:text property="fec_inf" style="width:100px" maxlength="10" styleId="fec_inf"/>
@@ -313,7 +313,7 @@ catch(Exception ex)
                                 </td>
                             </tr>
                             <tr>
-                               <td >Registre N&uacute;mero de Documento de Conclusi&oacute;n:
+                               <td >N&uacute;mero de Documento de Conclusi&oacute;n:
                                 </td>
                                 <td >
                                      <html:text property="nro_doc_con" style="width:100px" maxlength="30" styleId="nro_doc_con"/>
@@ -321,7 +321,7 @@ catch(Exception ex)
                                 </td>
                             </tr>
                             <tr>
-                               <td >Registre Fecha de Documento de Conclusi&oacute;n:
+                               <td >Fecha de Documento de Conclusi&oacute;n:
                                 </td>
                                 <td >
                                      <table><tr><td> <html:text property="fec_doc_con" style="width:100px" maxlength="10" styleId="fec_doc_con"/>
@@ -385,10 +385,10 @@ catch(Exception ex)
                             </tr>
                             <tr>
                                 <td>
-                                    Observaci&oacute;n Enmienda:
+                                    Justificaci&oacute;n Enmienda:
                                 </td>
                                 <td>
-                                    <html:text property="observacionenm" style="width:300px" maxlength="200" styleId="observacionenm"/>
+                                    <html:text property="observacionenm" style="width:100%" maxlength="200" styleId="observacionenm"/>
                                 </td>
                             </tr>
                             <tr>

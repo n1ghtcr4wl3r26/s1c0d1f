@@ -96,7 +96,7 @@ var fecha=new Date();
         Mensaje = Mensaje + "'N\372mero de Documento de remisi\363n' es obligatorio\n";
       }
     if(!fTrim($('#observacionenm').val())){
-        Mensaje = Mensaje + "'Observaci\363n Enmienda' es obligatorio";
+        Mensaje = Mensaje + "'Justificaci&oacute;n Enmienda' es obligatorio";
       }
       if( Mensaje == "" )
       {
@@ -240,10 +240,10 @@ catch(Exception ex)
                             </tr>
                             <tr>
                                 <td>
-                                    Observaci&oacute;n Enmienda:
+                                    Justificaci&oacute;n Enmienda:
                                 </td>
                                 <td>
-                                    <html:text property="observacionenm" style="width:300px" maxlength="200" styleId="observacionenm"/>
+                                    <html:text property="observacionenm" style="width:100%" maxlength="200" styleId="observacionenm"/>
                                 </td>
                             </tr>
                             <tr>

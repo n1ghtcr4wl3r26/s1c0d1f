@@ -27,8 +27,8 @@ public class FisFinalizaAction extends Action {
         FisFinalizaForm bean = (FisFinalizaForm)request.getAttribute("FisFinalizaForm");
         FisDeclaracionForm dui = new FisDeclaracionForm();
         ActionMessages error = new ActionMessages();
-
-        bean.setFechavenc(Util.DevuelveFechaVenc("GRL","3"));
+        String ger = Util.DevuelveGerenciaCon(bean.getKey_year(),bean.getKey_cuo(), bean.getReg_serial());
+        bean.setFechavenc(Util.DevuelveFechaVenc(ger,"3"));
 
         String usuario = (String)request.getSession().getAttribute("user.nick");
         bean.setUsuario((String)request.getSession().getAttribute("user.nick"));
@@ -75,7 +75,7 @@ public class FisFinalizaAction extends Action {
                         bean.setMensaje(Util.creamensaje("2", res.substring(5), "6"));
                     } else {
                         bean.setMensaje(Util.creamensaje("3",
-                                                         "Se registr&oacute; exitosamente la Finalizaci&oacute;n del Control Diferido " +
+                                                         "Se registr&oacute; exitosamente la Conclusi&oacute;n del Control Diferido " +
                                                          bean.getNrofis(), "6"));
                         /*bean.setKey_year("");
                         bean.setKey_cuo("");
@@ -131,7 +131,7 @@ public class FisFinalizaAction extends Action {
                     bean.setMensaje(Util.creamensaje("2", res.substring(5), "6"));
                 } else {
                     bean.setMensaje(Util.creamensaje("3",
-                                                     "Se registr&oacute; exitosamente la Finalizaci&oacute;n del Control Diferido " +
+                                                     "Se registr&oacute; exitosamente la Conclusi&oacute;n del Control Diferido " +
                                                      bean.getNrofis(), "6"));
                     /*bean.setKey_year("");
                     bean.setKey_cuo("");
